@@ -1,0 +1,36 @@
+﻿body {
+    background-image: url('../Resources/Best-Online-Quiz-Makers-Social.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.form-horizontal {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.25);
+    border-radius:20px;
+}
+
+    /* Set padding to keep content from hitting the edges */
+.body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
