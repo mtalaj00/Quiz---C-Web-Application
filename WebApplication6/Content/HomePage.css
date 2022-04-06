@@ -1,0 +1,42 @@
+﻿body {
+    background-image:url('../Resources/Best-Online-Quiz-Makers-Social.jpg');
+  
+}
+.form-horizontal_home {
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 25%;
+    }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #808080;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #eaac1d;
+            color: white;
+        }
+

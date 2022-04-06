@@ -1,0 +1,71 @@
+﻿@model WebApplication6.Models.QuestionModel
+
+<link href="@Url.Content("~/Content/Play.css")" rel="stylesheet" type="text/css" />
+<div class="topnav">
+    @Html.ActionLink("Home", "Home", "Home")
+    @Html.ActionLink("Play", "Play", "Home", null, new { @class = "active" })
+    @Html.ActionLink("Leaderboard", "Home", "Home")
+    @Html.ActionLink("SignOut", "StartPage", "Home")
+</div>
+<body>
+    <div>
+
+        <div class="question_form">
+
+            <h1 id="question">@Html.DisplayFor(model => model.question)</h1>
+
+            <input type="button" name="answerA" value="@Html.DisplayFor(model => model.answerA)" />
+
+            <h2 class="answer">@Html.DisplayFor(model => model.answerA)</h2>
+
+            <h2 class="answer">@Html.DisplayFor(model => model.answerB)</h2>
+
+            <h2 class="answer">@Html.DisplayFor(model => model.answerC)</h2>
+
+            <h2 class="answer">@Html.DisplayFor(model => model.answerD)</h2>
+
+
+
+        </div>
+    </div>
+</body>
+
+@*<dt>
+        @Html.DisplayNameFor(model => model.answerA)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.answerA)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.answerB)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.answerB)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.answerC)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.answerC)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.answerD)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.answerD)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.correctAnswer)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.correctAnswer)
+    </dd>*@
