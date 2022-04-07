@@ -14,5 +14,6 @@ namespace WebApplication6.Models
         public String answerC { get; set; }
         public String answerD { get; set; }
         public String correctAnswer { get; set; }
+
     }
 }

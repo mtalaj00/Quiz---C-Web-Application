@@ -4,30 +4,34 @@
 <div class="topnav">
     @Html.ActionLink("Home", "Home", "Home")
     @Html.ActionLink("Play", "Play", "Home", null, new { @class = "active" })
-    @Html.ActionLink("Leaderboard", "Home", "Home")
+    @Html.ActionLink("Leaderboard", "Leaderboard", "Home")
     @Html.ActionLink("SignOut", "StartPage", "Home")
 </div>
 <body>
-    <div>
+    @using (Html.BeginForm("Play", "Home", FormMethod.Post))
+    {
 
-        <div class="question_form">
+    <div class="question_form">
 
-            <h1 id="question">@Html.DisplayFor(model => model.question)</h1>
+        <h1 id="question">@Html.DisplayFor(model => model.question)</h1>
+        
+        <input class="answer" type="submit" value="@Html.DisplayFor(model => model.answerA)" name="answerA" />
+        <input class="answer" type="submit" value="@Html.DisplayFor(model => model.answerB)" name="answerB" />
+        <input class="answer" type="submit" value="@Html.DisplayFor(model => model.answerC)" name="answerC" />
+        <input class="answer" type="submit" value="@Html.DisplayFor(model => model.answerD)" name="answerD" />
 
-            <input type="button" name="answerA" value="@Html.DisplayFor(model => model.answerA)" />
+        @*<h2 class="answer">@Html.DisplayFor(model => model.answerA)</h2>
 
-            <h2 class="answer">@Html.DisplayFor(model => model.answerA)</h2>
+        <h2 class="answer">@Html.DisplayFor(model => model.answerB)</h2>
 
-            <h2 class="answer">@Html.DisplayFor(model => model.answerB)</h2>
+        <h2 class="answer">@Html.DisplayFor(model => model.answerC)</h2>
 
-            <h2 class="answer">@Html.DisplayFor(model => model.answerC)</h2>
-
-            <h2 class="answer">@Html.DisplayFor(model => model.answerD)</h2>
+        <h2 class="answer">@Html.DisplayFor(model => model.answerD)</h2>*@
 
 
 
-        </div>
     </div>
+    }
 </body>
 
 @*<dt>

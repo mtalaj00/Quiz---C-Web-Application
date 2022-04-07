@@ -10,7 +10,7 @@ namespace WebApplication6.Controllers
 {
     public class HomeController : Controller
     {
-        
+            
         public ActionResult StartPage()
         {
             return View();
@@ -57,7 +57,9 @@ namespace WebApplication6.Controllers
         {
             QuestionService questionService = new QuestionService();
             QuestionModel questionModel = new QuestionModel();
-
+                        
+         
+            questionService.setId(2);
             questionModel.question = questionService.GetQuestion();
             questionModel.answerA = questionService.GetAnswerA();
             questionModel.answerB = questionService.GetAnswerB();
@@ -67,19 +69,63 @@ namespace WebApplication6.Controllers
 
             return View(questionModel);
         }
-
         [HttpPost]
-        public ActionResult Play(string button)
+        public ActionResult Play(String answerA, String answerB, String answerC, String answerD, QuestionModel questionModel)
         {
+            if (!string.IsNullOrEmpty(answerA))
+            {
+                if (questionModel.correctAnswer == questionModel.answerA)
+                {
+                    
+                }
+                
+                return RedirectToAction("Home");
+            }
+            else if (!string.IsNullOrEmpty(answerB))
+            {
+                if (questionModel.correctAnswer == questionModel.answerB)
+                {
+                  
+                }
+                
+                return RedirectToAction("Play");
+            }
+            else if (!string.IsNullOrEmpty(answerC))
+            {
+                if (questionModel.correctAnswer == questionModel.answerC)
+                {
+                  
+                }
+                
+                return RedirectToAction("Play");
+            }
+            else if (!string.IsNullOrEmpty(answerD))
+            {
+                if (questionModel.correctAnswer == questionModel.answerD)
+                {
+                   
+                }
+                
+                return RedirectToAction("Play");
+            }
 
-            if (button =="answerA")
-            {
-                return View("Home");
-            }
-            else
-            {
-                return View();
-            }
+            return RedirectToAction("Play");
         }
+        public ActionResult Leaderboard()
+        {           
+            return View();
+        }
+
+        //[HttpPost]
+        //public ActionResult Play(String button)
+        //{
+        //    if (!String.IsNullOrEmpty(questionModel.answerA))
+        //    {
+        //        // button 1 clicked
+        //        return RedirectToRoute("Home");
+        //    }
+        //    else
+        //        return View();
+        //}
     }
 }
